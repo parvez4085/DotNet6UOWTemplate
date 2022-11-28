@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/DotNet6Template/bin/Debug/net6.0
+/.vs
+/DotNet6Template/obj
+/Template.Domain/bin/Debug/net6.0
+/Template.Domain/obj
+/Template.Infrastructure/bin/Debug/net6.0
+/Template.Infrastructure/obj
+/Template.Models/bin/Debug/net6.0
+/Template.Models/obj
+/Template.Services/bin/Debug/net6.0
+/Template.Services/obj
+/Template.Utility/bin/Debug/net6.0
+/Template.Utility/obj
