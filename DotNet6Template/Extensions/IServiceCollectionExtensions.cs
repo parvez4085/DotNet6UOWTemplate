@@ -14,7 +14,7 @@ namespace DotNet6Template.API.Extensions
             // Configure DbContext with Scoped lifetime
             services.AddDbContext<AppDbContext>(options =>
                 {
-                    options.UseSqlServer(configuration.GetConnectionString("ManagementConnection"));
+                    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
                     options.UseLazyLoadingProxies();
                 }
             );
@@ -30,19 +30,12 @@ namespace DotNet6Template.API.Extensions
         {
             return services
                 .AddScoped(typeof(IRepository<>), typeof(Repository<>))
-                .AddScoped<IUserRepository, UserRepository>()
-                .AddScoped<IUserRepository, UserRepository>()
-                .AddScoped<IUserRepository, UserRepository>()
-                .AddScoped<IUserRepository, UserRepository>()
                 .AddScoped<IUserRepository, UserRepository>();
         }
 
         public static IServiceCollection AddServices(this IServiceCollection services)
         {
             return services
-                .AddScoped<UserService>()
-                .AddScoped<UserService>()
-                .AddScoped<UserService>()
                 .AddScoped<UserService>();
         }
     }
